@@ -1,0 +1,17 @@
+server:
+  port: 8080
+  servlet:    context-path: /cliente-api/app/
+
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: ${MEC_DB_URL:jdbc:postgresql://localhost:5432/postgres}
+    username: ${MEC_DB_USERNAME:postgres}
+    password: ${MEC_DB_PASSWORD:postgres}
+  jpa:
+    hibernate:
+      ddl-auto: ${DDL_AUTO:update}
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true

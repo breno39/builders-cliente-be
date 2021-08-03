@@ -1,0 +1,15 @@
+version: "3.5"
+
+services:
+
+  postgres:
+    image: postgres:latest
+    ports: 
+      - "5432:5432"
+    container_name: cliente_postgres
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=postgres
+    volumes:
+      - /var/lib/postgresql/data
